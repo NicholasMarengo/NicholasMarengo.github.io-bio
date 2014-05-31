@@ -5,6 +5,49 @@ body {background-color:#E0E0E0; color:black; text-align:center; font-family:"Luc
 	and "Avant Garde" */
 	
 	
+	
+/*Fade in Animation
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/	
+	
+	.animated { 
+    -webkit-animation-duration: 5s; 
+    animation-duration: 5s; 
+    -webkit-animation-fill-mode: both; 
+    animation-fill-mode: both; 
+} 
+
+@-webkit-keyframes fadeInUp { 
+    0% { 
+        opacity: 0; 
+        -webkit-transform: translateY(20px); 
+    } 
+    100% { 
+        opacity: 1; 
+        -webkit-transform: translateY(0); 
+    } 
+} 
+
+@keyframes fadeInUp { 
+    0% { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    } 
+    100% { 
+        opacity: 1; 
+        transform: translateY(0); 
+    } 
+} 
+
+.fadeInUp { 
+    -webkit-animation-name: fadeInUp; 
+    animation-name: fadeInUp; 
+}
+	
+	
+	
+	
+/*Button
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/	
 
 .myButton {
 	-moz-box-shadow:inset 14px 4px 0px 11px #ffffff;
@@ -43,3 +86,58 @@ body {background-color:#E0E0E0; color:black; text-align:center; font-family:"Luc
 	position:relative;
 	top:1px;
 }
+
+
+
+
+/*Roll in animation for the pictures only
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.animated { 
+    -webkit-animation-duration: 3s; 
+    animation-duration: 3s; 
+    -webkit-animation-fill-mode: both; 
+    animation-fill-mode: both; 
+} 
+
+@-webkit-keyframes rollIn { 
+    0% { opacity: 0; -webkit-transform: translateX(-100%) rotate(-120deg); } 
+    100% { opacity: 1; -webkit-transform: translateX(0px) rotate(0deg); } 
+} 
+@keyframes rollIn { 
+    0% { opacity: 0; transform: translateX(-100%) rotate(-120deg); } 
+    100% { opacity: 1; transform: translateX(0px) rotate(0deg); } 
+} 
+.rollIn { 
+    -webkit-animation-name: rollIn; 
+    animation-name: rollIn; 
+}
+
+
+/* Shake animations on mouse hover
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+.animated { 
+    -webkit-animation-duration: 2.3s; 
+    animation-duration: 2.3s; 
+    -webkit-animation-fill-mode: both; 
+    animation-fill-mode: both; 
+} 
+
+@-webkit-keyframes shake { 
+    0%, 100% {-webkit-transform: translateX(0);} 
+    10%, 30%, 50%, 70%, 90% {-webkit-transform: translateX(-10px);} 
+    20%, 40%, 60%, 80% {-webkit-transform: translateX(10px);} 
+} 
+@keyframes shake { 
+    0%, 100% {transform: translateX(0);} 
+    10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);} 
+    20%, 40%, 60%, 80% {transform: translateX(10px);} 
+} 
+.shake:hover { 
+    -webkit-animation-name: shake; 
+    animation-name: shake; 
+}
+
+
